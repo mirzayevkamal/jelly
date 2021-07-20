@@ -64,7 +64,7 @@ export default function TopHeader() {
       return () => {
         document.removeEventListener("mousedown", handleClickOutside);
       };
-    }, [ref]);
+    }, [ref, refIcon]);
   }
 
   return (

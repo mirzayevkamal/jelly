@@ -1,14 +1,10 @@
-import { useState } from "react";
 import { createContainer } from "unstated-next";
 
 function MainProvider() {
-  const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState(null);
+  // You will do all your API calls here
+  // and return it in return {} statement to be avilable to all the components
   return {
-    showModal,
-    setShowModal,
-    modalContent,
-    setModalContent,
+    //Return smth here
   };
 }
 

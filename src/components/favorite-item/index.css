@@ -23,6 +23,12 @@
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  .favorite-item__properties h1 a {
+    font-size: 33px;
+  }
+}
+
 .favorite-item__properties h1 a:active {
   color: black;
 }

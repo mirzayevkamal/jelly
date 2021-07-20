@@ -1,4 +1,3 @@
-import CollectionItem from "../../components/collection-item";
 import CollectionItemAdmin from "../../components/collection-item-admin";
 import "./index.css";
 
@@ -45,6 +44,7 @@ export default function AdminPage() {
       {items.map((item) => {
         return (
           <CollectionItemAdmin
+            key={item.id}
             name={item.name}
             collection={item.collection}
             available={item.available}

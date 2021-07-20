@@ -105,6 +105,7 @@ export default function SellToken() {
                 {dropDownData.map((token) => {
                   return (
                     <li
+                      key={token.id}
                       onClick={() => {
                         if (token.name) {
                           setSelectedToken(token);

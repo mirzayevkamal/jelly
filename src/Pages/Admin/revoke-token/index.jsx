@@ -62,9 +62,6 @@ export default function RevokeToken() {
     }, [ref]);
   }
 
-  //Set token price
-  const [tokenPrice, setTokenPrice] = useState("1");
-
   return (
     <Modal
       top="132px"
@@ -105,6 +102,7 @@ export default function RevokeToken() {
                 {dropDownData.map((token) => {
                   return (
                     <li
+                      key={token.id}
                       onClick={() => {
                         if (token.name) {
                           setSelectedToken(token);

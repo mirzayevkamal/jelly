@@ -8,7 +8,7 @@ export default function FavoriteItem(props) {
     <div className="favorite-item">
       <div className="favorite-item__details">
         <Link to={`/collections/${props.collection}/${props.name}`}>
-          <img src="./images/item.png" />
+          <img alt="" src="./images/item.png" />
         </Link>
         <div className="favorite-item__properties">
           <h1>

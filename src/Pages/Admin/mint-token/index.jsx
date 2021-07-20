@@ -13,26 +13,6 @@ export default function MintToken() {
     setShowModal(e);
   };
 
-  //set stages
-  const stages = [
-    {
-      id: 1,
-      name: "stage01",
-    },
-    {
-      id: 2,
-      name: "stage02",
-    },
-    {
-      id: 3,
-      name: "stage03",
-    },
-    {
-      id: 4,
-      name: "stage04",
-    },
-  ];
-
   //stage change handling
   const [stage, setStage] = useState(1);
   const handleStageChange = () => {
@@ -60,25 +40,25 @@ export default function MintToken() {
   };
 
   //Set values
-  const [tokenName, setTokenName] = useState(null);
-  const [tokenDescription, setTokenDescription] = useState(null);
+  const [tokenName, setTokenName] = useState("");
+  const [tokenDescription, setTokenDescription] = useState("");
 
-  const [tokenLink, setTokenLink] = useState(null);
-  const [tokenLinkFull, setTokenLinkFull] = useState(null);
+  const [tokenLink, setTokenLink] = useState("");
+  const [tokenLinkFull, setTokenLinkFull] = useState("");
 
-  const [accessCode, setAccessCode] = useState(null);
-  const [accessCodeFull, setAccessCodeFull] = useState(null);
+  const [accessCode, setAccessCode] = useState("");
+  const [accessCodeFull, setAccessCodeFull] = useState("");
 
-  const [optional, setOptional] = useState(null);
-  const [optionalFull, setOptionalFull] = useState(null);
+  const [optional, setOptional] = useState("");
+  const [optionalFull, setOptionalFull] = useState("");
 
   const handleContinue = () => {
     if (stage === 1 || stage === 2) {
       handleStageChange();
     } else if (stage === 3)
-      if (tokenName === null) {
+      if (tokenName === "") {
         document.querySelector(".stage-three__name").classList.add("invalid");
-      } else if (tokenDescription === null) {
+      } else if (tokenDescription === "") {
         document
           .querySelector(".stage-three__description")
           .classList.add("invalid");
@@ -87,19 +67,19 @@ export default function MintToken() {
       }
 
     if (stage === 4) {
-      if (accessCode === null) {
+      if (accessCode === "") {
         document.querySelector(".code").classList.add("invalid");
-      } else if (accessCodeFull === null) {
+      } else if (accessCodeFull === "") {
         document.querySelector(".code-full").classList.add("invalid");
       }
-      if (tokenLink === null) {
+      if (tokenLink === "") {
         document.querySelector(".link").classList.add("invalid");
-      } else if (tokenLinkFull === null) {
+      } else if (tokenLinkFull === "") {
         document.querySelector(".link-full").classList.add("invalid");
       }
-      if (optional === null) {
+      if (optional === "") {
         document.querySelector(".optional").classList.add("invalid");
-      } else if (optionalFull === null) {
+      } else if (optionalFull === "") {
         document.querySelector(".optional-full").classList.add("invalid");
       } else {
         handleStageChange();
@@ -158,7 +138,7 @@ export default function MintToken() {
         <div className="stage-two">
           <h1>Upload a file</h1>
           <div className="stage-two__upload">
-            <img src={imagePreview} />
+            <img alt="" src={imagePreview} />
             <input
               onChange={(e) => handleImagePrev(e.target)}
               id="file"
@@ -175,13 +155,21 @@ export default function MintToken() {
           <h1>Enter A Name</h1>
           <input
             value={tokenName}
-            onChange={(e) => setTokenName(e.target.value)}
+            onChange={(e) => {
+              if (e.target.classList.value.includes("invalid")) {
+                e.target.classList.remove("invalid");
+              }
+              setTokenName(e.target.value);
+            }}
             className="stage-three__name"
           />
           <h1>Enter a Description</h1>
           <textarea
             value={tokenDescription}
             onChange={(e) => {
+              if (e.target.classList.value.includes("invalid")) {
+                e.target.classList.remove("invalid");
+              }
               setTokenDescription(e.target.value);
               auto_height(e.target);
             }}
@@ -208,7 +196,6 @@ export default function MintToken() {
             <input
               value={tokenLinkFull}
               onChange={(e) => {
-                console.log(tokenLinkFull);
                 setTokenLinkFull(e.target.value);
                 if (e.target.classList.value.includes("invalid")) {
                   e.target.classList.remove("invalid");

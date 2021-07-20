@@ -3,7 +3,7 @@ import { createContainer } from "unstated-next";
 
 function AuthProvider() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
   return {
     isLoggedIn,

@@ -73,7 +73,7 @@ export default function MainHeader() {
       return () => {
         document.removeEventListener("mousedown", handleClickOutside);
       };
-    }, [ref]);
+    }, [ref, refIcon]);
   }
 
   return (
@@ -90,7 +90,7 @@ export default function MainHeader() {
       <div className="main-header__links">
         {links.map((link) => {
           return (
-            <Link to={link.link}>
+            <Link key={`main-header-link-${link.id}`} to={link.link}>
               <li key={`main-header-${link.id}`}>{link.name}</li>
             </Link>
           );
@@ -107,7 +107,7 @@ export default function MainHeader() {
           >
             {links.map((link) => {
               return (
-                <Link to={link.link}>
+                <Link key={`main-header-mobile-link-${link.id}`} to={link.link}>
                   <li
                     onClick={() => setMainMenu(false)}
                     key={`main-header-mobile-${link.id}`}

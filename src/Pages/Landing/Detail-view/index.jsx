@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import EmailInput from "../../../components/email-input";
 
 import Modal from "../../../components/modal";
@@ -20,8 +20,6 @@ export default function DetailView() {
   const handleEmailInput2 = (email) => {
     setEmail2(email);
   };
-
-  const [showErr, setShowErr] = useState(false);
 
   const handleSubmit = () => {
     if (email.length > 5 && email === email2) {

@@ -33,7 +33,7 @@ export default function App() {
     <>
       <Router>
         <TopHeader />
-        {!auth.isAdmin && <MainHeader />}
+        {auth.isAdmin && <MainHeader />}
         <Switch>
           <Route exact path="/">
             <LandingPage />
