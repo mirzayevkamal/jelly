@@ -1,0 +1,139 @@
+.sell-token {
+  width: 100%;
+  height: 100%;
+}
+
+.sell-token h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sell-token__dropdown {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.sell-token__dropdown button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0px 30px;
+  border-bottom: 2px solid var(--mainColor);
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .sell-token__dropdown button {
+    font-size: 25px;
+  }
+
+  .sell-token__dropdown ul {
+    width: 80% !important;
+  }
+}
+
+.sell-token__dropdown button:focus {
+  outline: none;
+}
+
+.sell-token__dropdown ul {
+  position: absolute;
+  top: 70px;
+  width: 60%;
+  list-style: none;
+}
+
+.sell-token__dropdown ul li {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sell-token__dropdown ul li:hover {
+  color: var(--linkHoverColor);
+}
+
+.sell-token__price {
+  margin-top: 60px;
+}
+
+.sell-token__button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 35px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.sell-token__button p {
+  font-style: normal;
+}
+
+.sell-token__button p {
+  font-weight: bold;
+}
+
+.sell-token__button span {
+  margin-left: 10px;
+}
+
+.sell-token__input {
+  width: 100px;
+  display: flex;
+  position: relative;
+  float: right;
+  transform: translate(-95px, 0px);
+}
+
+.sell-token__input input {
+  width: 75px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  text-indent: 20px;
+}
+
+.sell-token__input input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.sell-token__input span {
+  position: absolute;
+  right: 1px;
+  bottom: 5px;
+  font-weight: 300;
+  font-size: 13px;
+  border-bottom: 2px solid var(--mainColor);
+  padding-bottom: 2px;
+  margin-bottom: -5px;
+}

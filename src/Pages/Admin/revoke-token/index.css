@@ -1,0 +1,89 @@
+.revoke-token {
+  width: 100%;
+  height: 100%;
+}
+
+.revoke-token h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.revoke-token__dropdown {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.revoke-token__dropdown button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0px 30px;
+  border-bottom: 2px solid var(--mainColor);
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.revoke-token__dropdown button:focus {
+  outline: none;
+}
+
+.revoke-token__dropdown ul {
+  position: absolute;
+  top: 70px;
+  width: 60%;
+  list-style: none;
+}
+
+.revoke-token__dropdown ul li {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.revoke-token__dropdown ul li:hover {
+  color: var(--linkHoverColor);
+}
+
+.revoke-token__button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 35px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.revoke-token__button p {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.revoke-token__button span {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .revoke-token__dropdown button {
+    font-size: 25px;
+  }
+
+  .revoke-token__dropdown ul {
+    width: 80% !important;
+  }
+}

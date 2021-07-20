@@ -1,0 +1,66 @@
+.start-sale {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.start-sale h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.start-sale p {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.start-sale span {
+  color: var(--mainColor);
+}
+
+.start-sale ul {
+  list-style: none;
+  height: 230px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  overflow-y: auto;
+}
+
+.start-sale ul li {
+  margin: 10px 0px;
+}
+
+.start-sale__button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 35px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.start-sale__button p {
+  font-weight: bold;
+  font-size: 35px;
+  font-style: normal;
+}
+
+.start-sale__button span {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .start-sale {
+    width: 95%;
+  }
+}

@@ -1,0 +1,98 @@
+.start-auction {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: right;
+}
+
+.start-auction h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.start-auction p {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.start-auction span {
+  color: var(--mainColor);
+}
+
+.start-auction__button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 35px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.start-auction__button p {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.start-auction__button span {
+  margin-left: 10px;
+}
+
+.start-auction__inputs {
+  display: grid;
+  margin-top: 20px;
+}
+
+.start-auction__input {
+  display: flex;
+  float: right;
+  margin: 6px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start-auction__input p {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.start-auction__input input {
+  width: 100px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-left: 40px;
+}
+
+.start-auction__input input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.start-auction__text {
+  margin-top: 50px;
+  width: 70%;
+  float: right;
+  text-align: right;
+}

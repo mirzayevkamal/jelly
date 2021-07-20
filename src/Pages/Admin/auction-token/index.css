@@ -1,0 +1,136 @@
+.auction-token {
+  width: 100%;
+  height: 100%;
+}
+
+.auction-token h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.auction-token__dropdown {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.auction-token__dropdown button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0px 30px;
+  border-bottom: 2px solid var(--mainColor);
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.auction-token__dropdown button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .auction-token__dropdown button {
+    font-size: 25px;
+  }
+
+  .auction-token__dropdown ul {
+    width: 80% !important;
+  }
+}
+
+.auction-token__dropdown ul {
+  position: absolute;
+  top: 70px;
+  width: 60%;
+  list-style: none;
+}
+
+.auction-token__dropdown ul li {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.auction-token__dropdown ul li:hover {
+  color: var(--linkHoverColor);
+}
+
+.auction-token__price {
+  margin-top: 60px;
+}
+
+.auction-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 35px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.auction-button p {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.auction-button span {
+  margin-left: 10px;
+}
+
+.auction-token__input {
+  width: 100px;
+  display: flex;
+  position: relative;
+  float: right;
+  transform: translate(-95px, 0px);
+}
+
+.auction-token__input input {
+  width: 75px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  text-indent: 20px;
+}
+
+.auction-token__input input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.auction-token__input span {
+  position: absolute;
+  right: 1px;
+  bottom: 5px;
+  font-weight: 300;
+  font-size: 13px;
+  border-bottom: 2px solid var(--mainColor);
+  padding-bottom: 2px;
+  margin-bottom: -5px;
+}

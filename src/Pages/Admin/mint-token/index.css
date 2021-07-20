@@ -1,0 +1,281 @@
+.stage-one {
+  width: 100%;
+  height: 80%;
+}
+
+.stage-one h1 {
+  font-size: 66px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stage-one__buttons {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+}
+
+.stage-one__buttons-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-one__buttons-center button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.stage-one__buttons-center button:hover {
+  color: var(--mainColor);
+}
+
+.isSelected {
+  color: var(--mainColor) !important;
+}
+
+.stage-one__buttons-center button::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--mainColor);
+  right: -10px;
+}
+
+.mint-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 66px;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: 300 !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+}
+
+.mint-button span {
+  margin-left: 10px;
+}
+
+.mint-button p {
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (min-width: 1002px) and (max-width: 1900px) {
+  .stage-one h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 1670px) {
+  .stage-one h1 {
+    font-size: 35px;
+  }
+
+  .mint-button {
+    font-size: 50px;
+  }
+
+  .stage-one__buttons-center button {
+    font-size: 40px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stage-one h1 {
+    font-size: 27px;
+  }
+
+  .mint-button {
+    font-size: 40px;
+  }
+
+  .stage-one__buttons-center button {
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  .stage-one {
+    height: 60%;
+  }
+
+  .stage-three h1 {
+    font-size: 27px !important;
+  }
+}
+
+.stage-two {
+  width: 100%;
+  height: 100%;
+}
+
+.stage-two h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stage-two__upload {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage-two__upload img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.stage-two__upload input {
+  display: none;
+}
+
+.stage-two__button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stage-two__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.stage-two__button:hover {
+  color: var(--mainColor);
+}
+
+.stage-two__button::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--mainColor);
+  right: -10px;
+}
+
+.stage-three {
+  width: 100%;
+  height: 100%;
+}
+
+.stage-three h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stage-three__name {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  margin-bottom: 70px;
+  text-align: center;
+  color: var(--linkColor);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.stage-three__name:focus {
+  outline: none;
+}
+
+.stage-three__description {
+  width: 100%;
+  height: 34px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--linkColor);
+  margin-top: 10px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.stage-three__description:focus {
+  outline: none;
+}
+
+.stage-four h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.stage-four__inputs {
+  width: 100%;
+}
+
+.stage-four__input-short {
+  width: 30%;
+  height: 40px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  text-align: center;
+  color: var(--linkColor);
+  text-transform: uppercase;
+}
+
+.stage-four__input-short:focus {
+  outline: none;
+}
+
+.stage-four__input-long {
+  width: calc(70% - 20px);
+  margin: 10px 10px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  text-align: center;
+  color: var(--linkColor);
+  text-transform: uppercase;
+}
+
+.stage-four__input-long:focus {
+  outline: none;
+}
+
+.invalid {
+  border-bottom: 2px solid red !important;
+}
