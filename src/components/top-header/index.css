@@ -108,8 +108,7 @@
   }
 }
 
-@media screen and (min-width: 1900px) {
-  .top-header__account button svg {
-    margin-bottom: 1px;
-  }
+.top-header__account button {
+  font-size: 25px !important;
+  margin-top: 10px;
 }
