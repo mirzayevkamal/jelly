@@ -4,7 +4,7 @@
 }
 
 .sell-token h1 {
-  font-size: 35px;
+  font-size: 66px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -20,22 +20,12 @@
 .sell-token__dropdown button {
   border: none;
   background: none;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 300;
   margin: 0px 30px;
   border-bottom: 2px solid var(--mainColor);
   padding: 10px 0px;
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .sell-token__dropdown button {
-    font-size: 25px;
-  }
-
-  .sell-token__dropdown ul {
-    width: 80% !important;
-  }
 }
 
 .sell-token__dropdown button:focus {
@@ -72,7 +62,7 @@
   position: absolute;
   bottom: 40px;
   right: 40px;
-  font-size: 35px;
+  font-size: 66px;
   border: none;
   background: none;
   color: var(--mainColor);
@@ -100,7 +90,7 @@
   display: flex;
   position: relative;
   float: right;
-  transform: translate(-95px, 0px);
+  transform: translate(-135px, 0px);
 }
 
 .sell-token__input input {
@@ -108,7 +98,7 @@
   border: none;
   border-bottom: 2px solid var(--mainColor);
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 300;
   text-indent: 20px;
 }

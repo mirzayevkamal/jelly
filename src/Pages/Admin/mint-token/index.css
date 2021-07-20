@@ -80,50 +80,6 @@
   font-style: normal;
 }
 
-@media screen and (min-width: 1002px) and (max-width: 1900px) {
-  .stage-one h1 {
-    font-size: 45px;
-  }
-}
-
-@media screen and (max-width: 1670px) {
-  .stage-one h1 {
-    font-size: 35px;
-  }
-
-  .mint-button {
-    font-size: 50px;
-  }
-
-  .stage-one__buttons-center button {
-    font-size: 40px;
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .stage-one h1 {
-    font-size: 27px;
-  }
-
-  .mint-button {
-    font-size: 40px;
-  }
-
-  .stage-one__buttons-center button {
-    font-size: 30px;
-    margin: 10px;
-  }
-
-  .stage-one {
-    height: 60%;
-  }
-
-  .stage-three h1 {
-    font-size: 27px !important;
-  }
-}
-
 .stage-two {
   width: 100%;
   height: 100%;

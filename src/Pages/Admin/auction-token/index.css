@@ -32,16 +32,6 @@
   outline: none;
 }
 
-@media screen and (max-width: 768px) {
-  .auction-token__dropdown button {
-    font-size: 25px;
-  }
-
-  .auction-token__dropdown ul {
-    width: 80% !important;
-  }
-}
-
 .auction-token__dropdown ul {
   position: absolute;
   top: 70px;

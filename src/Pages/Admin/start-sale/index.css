@@ -51,16 +51,79 @@
 
 .start-sale__button p {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 66px !important;
   font-style: normal;
 }
 
 .start-sale__button span {
   margin-left: 10px;
+  font-size: 66px !important;
 }
 
 @media screen and (max-width: 768px) {
   .start-sale {
     width: 95%;
+  }
+
+  .start-sale h1 {
+    font-size: 35px !important;
+  }
+
+  .start-sale p {
+    font-size: 18px;
+  }
+
+  .start-sale__button p {
+    font-size: 35px !important;
+  }
+
+  .start-sale__button span {
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1680px) {
+  .start-sale h1 {
+    font-size: 35px !important;
+  }
+
+  .start-sale p {
+    font-size: 20px;
+  }
+
+  .start-sale__button p {
+    font-size: 35px !important;
+  }
+
+  .start-sale__button span {
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .start-sale h1 {
+    font-size: 66px !important;
+  }
+
+  .start-sale p {
+    font-size: 50px !important;
+  }
+
+  .start-sale p {
+    font-size: 35px !important;
+  }
+
+  .start-sale__button p {
+    font-size: 66px !important;
+  }
+
+  .start-sale__button span {
+    font-size: 66px !important;
+  }
+}
+
+@media screen and (min-width: 1680px) and (max-width: 1900px) {
+  .start-sale h1 {
+    font-size: 55px !important;
   }
 }

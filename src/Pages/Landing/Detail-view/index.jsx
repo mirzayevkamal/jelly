@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EmailInput from "../../../components/email-input";
 
 import Modal from "../../../components/modal";
@@ -31,6 +31,16 @@ export default function DetailView() {
       alert("E-mails should be the same");
     }
   };
+
+  // useEffect(() => {
+  //   if (showModal) {
+  //     document.body.style.height = "70vh";
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.height = "auto";
+  //     document.body.style.overflow = "unset";
+  //   }
+  // }, [showModal]);
 
   return (
     <>

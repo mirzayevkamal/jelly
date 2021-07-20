@@ -164,3 +164,129 @@
     height: 130vh;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 35px !important;
+  }
+  button {
+    font-size: 27px !important;
+  }
+
+  .sell-token__dropdown button {
+    font-size: 20px !important;
+  }
+  .start-auction p {
+    font-size: 20px !important;
+  }
+
+  .stage-four h1 {
+    font-size: 26px !important;
+  }
+
+  .sell-token__input {
+    transform: translate(-35px, 0px) !important;
+  }
+
+  .sell-token__input input {
+    font-size: 20px !important;
+  }
+
+  .auction-token__dropdown button {
+    font-size: 25px !important;
+  }
+
+  .auction-token__input {
+    transform: translate(-35px, 0px) !important;
+  }
+
+  .start-auction {
+    text-align: center !important;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1900px) {
+  h1 {
+    font-size: 35px !important;
+  }
+  button {
+    font-size: 27px !important;
+  }
+
+  .sell-token__dropdown button {
+    font-size: 20px !important;
+  }
+
+  .sell-token__input {
+    transform: translate(-102px, 0px) !important;
+  }
+
+  .sell-token__input input {
+    font-size: 20px !important;
+  }
+
+  .auction-token__dropdown button {
+    font-size: 25px !important;
+  }
+
+  .auction-token__input {
+    transform: translate(-102px, 0px) !important;
+  }
+
+  .start-auction {
+    text-align: center !important;
+  }
+
+  .start-auction__button span {
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  h1 {
+    font-size: 66px !important;
+  }
+  button {
+    font-size: 66px !important;
+  }
+
+  .sell-token__dropdown button {
+    font-size: 50px !important;
+  }
+
+  .sell-token__input {
+    transform: translate(-135px, 0px) !important;
+  }
+
+  .sell-token__input input {
+    font-size: 50px !important;
+  }
+
+  .auction-token__dropdown button {
+    font-size: 50px !important;
+  }
+
+  .auction-token__input {
+    transform: translate(-135px, 0px) !important;
+  }
+
+  .auction-token__input input {
+    font-size: 50px !important;
+  }
+
+  .start-auction {
+    text-align: center !important;
+  }
+
+  .start-auction p {
+    font-size: 50px !important;
+  }
+
+  .start-auction__input input {
+    font-size: 50px !important;
+  }
+
+  .revoke-token__dropdown button {
+    font-size: 50px !important;
+  }
+}

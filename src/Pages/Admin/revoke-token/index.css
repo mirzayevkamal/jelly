@@ -77,13 +77,3 @@
 .revoke-token__button span {
   margin-left: 10px;
 }
-
-@media screen and (max-width: 768px) {
-  .revoke-token__dropdown button {
-    font-size: 25px;
-  }
-
-  .revoke-token__dropdown ul {
-    width: 80% !important;
-  }
-}
