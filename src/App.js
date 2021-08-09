@@ -82,9 +82,6 @@ export default function App() {
           </Route>
           <Redirect to="/404" />
         </Switch>
-        <Modal image="../images/flutter.svg">
-          <h1>fdknfdj</h1>
-        </Modal>
         <Footer />
       </Router>
     </>

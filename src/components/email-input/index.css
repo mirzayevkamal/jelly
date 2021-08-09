@@ -1,31 +1,44 @@
 .email-input {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .email-input__label {
-  font-size: 30px;
-  text-align: center;
-  font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .email-input__input {
-  margin-top: 20px;
-  border: none;
-  border-bottom: 2px solid var(--mainColor);
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 70px;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 2px solid var(--mainColor);
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 70px;
 }
 
 .email-input__input:focus {
-  outline: none;
+    outline: none;
 }
 
 .invalid-input {
-  border-bottom: 2px solid red !important;
+    border-bottom: 2px solid red !important;
+}
+
+.email-input__text {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .email-input__text {
+        width: 100%;
+    }
 }

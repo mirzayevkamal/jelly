@@ -1,0 +1,90 @@
+.collection-wide {
+    width: 100%;
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden !important;
+}
+
+.collection-wide__link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.collection-wide__img {
+    width: 100%;
+}
+
+.collection-wide:nth-child(2n + 1) .collection-wide__cover {
+    height: 100%;
+    width: 30%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    background: rgb(255 255 255/77%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: black;
+}
+
+.collection-wide:nth-child(2n + 2) .collection-wide__cover {
+    height: 100%;
+    width: 30%;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    background: rgb(255 255 255/77%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: black;
+}
+
+.collection-wide__cover {
+    transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.collection-wide:hover .collection-wide__cover {
+    width: 100% !important;
+    transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.collection-wide__text-headline {
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.collection-wide__text-detail {
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .collection-wide__text-headline {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .collection-wide__text-detail {
+        font-size: 25px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-style: italic;
+    }
+    .collection-wide:nth-child(2n + 1) .collection-wide__cover {
+        width: 50%;
+    }
+    .collection-wide:nth-child(2n + 2) .collection-wide__cover {
+        width: 50%;
+    }
+}

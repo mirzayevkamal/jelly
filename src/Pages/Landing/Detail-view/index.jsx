@@ -42,6 +42,11 @@ export default function DetailView() {
   //   }
   // }, [showModal]);
 
+  const [bidModal, setBidModal] = useState(0);
+
+  //Set token price
+  const [tokenPrice, setTokenPrice] = useState("1");
+
   return (
     <>
       <div className="detail-view">
@@ -96,19 +101,45 @@ export default function DetailView() {
         showModal={showModal}
         image="./images/flutter.svg"
       >
-        <div style={{ paddingTop: "30px" }}>
-          <EmailInput
-            handleEmailInput={(e) => handleEmailInput(e)}
-            label="ENTER YOUR MAIL"
-          />
-          <EmailInput
-            handleEmailInput={(e) => handleEmailInput2(e)}
-            label="CONFIRM YOUR MAIL"
-          />
+        {bidModal == 1 ? (
+          <div style={{ paddingTop: "30px" }}>
+            <EmailInput
+              handleEmailInput={(e) => handleEmailInput(e)}
+              label="ENTER YOUR MAIL"
+              text="THE TOKEN YOU ARE BIDDING ON COMES WITH ACCESS-CODES, WHICH WE WILL
+SEND TO YOUR MAIL-ADDRESS."
+            />
+            <EmailInput
+              handleEmailInput={(e) => handleEmailInput2(e)}
+              label="CONFIRM YOUR MAIL"
+            />
+          </div>
+        ) : (
+          <div className="detail-view__bid">
+            <h1>SPECIFY BID AMOUNT</h1>
+            <p>ENTER THE AMOUNT YOU WANT TO BID.</p>
+            <div className="detail-view__input">
+              <input
+                type="number"
+                value={tokenPrice}
+                onChange={(e) => setTokenPrice(e.target.value)}
+              />
+              <span>ETH</span>
+            </div>
+          </div>
+        )}
+        {bidModal == 1 ? (
           <button onClick={handleSubmit} className="detail-view__modal-button">
             <p>Bid</p> <span>Now</span>
           </button>
-        </div>
+        ) : (
+          <button
+            onClick={() => setBidModal(1)}
+            className="detail-view__modal-button"
+          >
+            <p>Bid</p> <span>Now</span>
+          </button>
+        )}
       </Modal>
     </>
   );
