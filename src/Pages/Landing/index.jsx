@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import CollectionWide from "../../components/collection-wide";
+import AuthJelly from "../../Providers/AuthProvider";
 
 import "./index.css";
 
 export default function LandingPage() {
+  const auth = AuthJelly.useContainer();
+
   const data = [
     {
       id: 1,
@@ -30,6 +33,35 @@ export default function LandingPage() {
       link: "/collections/cloud",
     },
   ];
+
+  const [height, setHeight] = useState(82);
+
+  useEffect(() => {
+    if (auth.isAdmin && window.innerWidth > 1500) {
+      setHeight(84);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "112px auto 36px";
+    } else if (!auth.isAdmin && window.innerWidth > 1500) {
+      setHeight(88);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "75px auto 36px";
+    } else if (!auth.isAdmin && window.innerWidth < 1500) {
+      setHeight(87);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "75px auto 36px";
+    } else {
+      setHeight(87);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "75px auto 36px";
+    }
+  }, [auth.isAdmin, window.innerWidth]);
+
+  // useEffect(() => {
+  //   console.log("inn wid", window.innerWidth);
+  //   if (window.innerWidth < 1500) {
+  //     setHeight(77);
+  //   }
+  // }, [window.innerWidth]);
 
   return (
     // <div className="landing-page">
@@ -67,7 +99,7 @@ export default function LandingPage() {
             link={item.link}
             name={item.name}
             image={item.image}
-            height={`calc(78vh / ${data.length})`}
+            height={`calc(${height}vh / ${data.length})`}
           />
         );
       })}

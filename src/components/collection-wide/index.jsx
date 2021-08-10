@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 export default function CollectionWide(props) {
-  console.log(props);
   return (
     <div
       style={{

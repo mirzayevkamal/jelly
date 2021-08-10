@@ -17,22 +17,44 @@
   --thumbBG: #c5c5c5;
 }
 
-body {
-  margin-bottom: 100px;
-}
-
 *::-webkit-scrollbar {
   width: 8px;
 }
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
 *::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
+
 *::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "main"
+    "footer";
+  grid-template-rows: 132px auto 36px;
+}
+
+.jelly-header {
+  grid-area: head;
+}
+
+.jelly-footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    grid-template-rows: 112px auto 36px;
+  }
 }
