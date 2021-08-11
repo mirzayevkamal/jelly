@@ -37,16 +37,24 @@ export default function LandingPage() {
   const [height, setHeight] = useState(82);
 
   useEffect(() => {
-    if (auth.isAdmin && window.innerWidth > 1500) {
+    if (auth.isAdmin && 2200 > window.innerWidth > 1500) {
       setHeight(84);
       document.querySelector(".main-container").style.gridTemplateRows =
         "112px auto 36px";
-    } else if (!auth.isAdmin && window.innerWidth > 1500) {
+    } else if (!auth.isAdmin && 2200 > window.innerWidth > 1500) {
       setHeight(88);
       document.querySelector(".main-container").style.gridTemplateRows =
         "75px auto 36px";
     } else if (!auth.isAdmin && window.innerWidth < 1500) {
       setHeight(87);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "75px auto 36px";
+    } else if (auth.isAdmin && window.innerWidth > 2200) {
+      setHeight(91);
+      document.querySelector(".main-container").style.gridTemplateRows =
+        "75px auto 36px";
+    } else if (!auth.isAdmin && window.innerWidth > 2200) {
+      setHeight(91);
       document.querySelector(".main-container").style.gridTemplateRows =
         "75px auto 36px";
     } else {
